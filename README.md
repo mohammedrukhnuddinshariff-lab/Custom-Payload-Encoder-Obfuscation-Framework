@@ -1,3 +1,17 @@
+<div align="center">
+
+# 🛡️ Custom Payload Encoder & Obfuscation Framework
+
+### Educational Cybersecurity Framework for Encoding, Obfuscation Analysis & Defensive Detection
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Security](https://img.shields.io/badge/Focus-Cybersecurity-red)
+![Testing](https://img.shields.io/badge/Tests-9%20Passing-success)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+</div>
+
+---
 # Custom Payload Encoder & Obfuscation Framework
 
 A Python-based cybersecurity research and educational framework for studying encoding, string transformation, basic obfuscation techniques, defensive signature detection, and detection-rate analysis using safe and benign test strings.
