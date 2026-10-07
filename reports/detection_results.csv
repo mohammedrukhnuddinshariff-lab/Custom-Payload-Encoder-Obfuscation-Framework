@@ -1,0 +1,9 @@
+Method,Detection Status,Matched Signatures
+Original,DETECTED,TEST_SECURITY_STRING
+Base64,NOT DETECTED,
+XOR,NOT DETECTED,
+ROT13,NOT DETECTED,
+String Split,NOT DETECTED,
+Character Insertion,NOT DETECTED,
+Escape Representation,NOT DETECTED,
+ROT13 + Base64 + Base64,NOT DETECTED,

@@ -1,0 +1,52 @@
+{
+    "project": "Custom Payload Encoder & Obfuscation Framework",
+    "generated_at": "2026-10-07 22:22:20",
+    "total_tests": 8,
+    "detected": 1,
+    "not_detected": 7,
+    "detection_rate_percent": 12.5,
+    "results": [
+        {
+            "method": "Original",
+            "status": "DETECTED",
+            "matches": [
+                "TEST_SECURITY_STRING"
+            ]
+        },
+        {
+            "method": "Base64",
+            "status": "NOT DETECTED",
+            "matches": []
+        },
+        {
+            "method": "XOR",
+            "status": "NOT DETECTED",
+            "matches": []
+        },
+        {
+            "method": "ROT13",
+            "status": "NOT DETECTED",
+            "matches": []
+        },
+        {
+            "method": "String Split",
+            "status": "NOT DETECTED",
+            "matches": []
+        },
+        {
+            "method": "Character Insertion",
+            "status": "NOT DETECTED",
+            "matches": []
+        },
+        {
+            "method": "Escape Representation",
+            "status": "NOT DETECTED",
+            "matches": []
+        },
+        {
+            "method": "ROT13 + Base64 + Base64",
+            "status": "NOT DETECTED",
+            "matches": []
+        }
+    ]
+}
