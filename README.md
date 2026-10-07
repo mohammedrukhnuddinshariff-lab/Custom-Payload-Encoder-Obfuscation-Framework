@@ -11,7 +11,18 @@
 
 </div>
 
+---</div>
+
 ---
+
+## 🏗️ Architecture
+
+![Custom Payload Encoder & Obfuscation Framework Architecture](a_wide_dark_themed_infographic_diagram_with_neon.png)
+
+The framework follows a defensive analysis workflow:
+
+**Input → Encoding → Obfuscation → Detection → Analysis → Reporting**
+
 # Custom Payload Encoder & Obfuscation Framework
 
 A Python-based cybersecurity research and educational framework for studying encoding, string transformation, basic obfuscation techniques, defensive signature detection, and detection-rate analysis using safe and benign test strings.
