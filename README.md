@@ -17,7 +17,7 @@
 
 ## 🏗️ Architecture
 
-![Custom Payload Encoder & Obfuscation Framework Architecture](a_wide_dark_themed_infographic_diagram_with_neon.png)
+![Custom Payload Security Framework Diagram](Custom%20Payload%20Security%20Framework%20Diagram.png)
 
 The framework follows a defensive analysis workflow:
 
