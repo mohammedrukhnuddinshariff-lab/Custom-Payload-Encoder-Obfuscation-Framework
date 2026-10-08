@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Payload Encoder & Obfuscation Framework</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #08111f;
+            color: #e8f1f8;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        h1 {
+            color: #00d9ff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #9fb3c8;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: #101d2d;
+            border: 1px solid #23405a;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #35536d;
+            background: #07101c;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #00a8cc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #008aaa;
+        }
+
+        .result {
+            background: #07101c;
+            border: 1px solid #29455d;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 12px;
+            word-break: break-all;
+        }
+
+        .result strong {
+            color: #00d9ff;
+        }
+
+        .safe {
+            color: #55e6a5;
+        }
+
+        .warning {
+            color: #ffcc66;
+        }
+
+        footer {
+            text-align: center;
+            color: #71869a;
+            margin-top: 35px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Custom Payload Encoder & Obfuscation Framework</h1>
+
+    <div class="subtitle">
+        Educational Cybersecurity & Defensive Detection Framework
+    </div>
+
+    <div class="card">
+
+        <h2>Test Input</h2>
+
+        <p>
+            Enter a benign security test string to analyze its different
+            representations.
+        </p>
+
+        <form method="POST">
+
+            <label for="text">Test String</label>
+
+            <input
+                type="text"
+                id="text"
+                name="text"
+                value="{{ text }}"
+                placeholder="Example: TEST_SECURITY_STRING"
+                required
+            >
+
+            <button type="submit">
+                Analyze String
+            </button>
+
+        </form>
+
+    </div>
+
+    {% if results %}
+
+    <div class="card">
+
+        <h2>Transformation Results</h2>
+
+        <div class="result">
+            <strong>Base64:</strong><br>
+            {{ results.base64 }}
+        </div>
+
+        <div class="result">
+            <strong>XOR:</strong><br>
+            {{ results.xor }}
+        </div>
+
+        <div class="result">
+            <strong>ROT13:</strong><br>
+            {{ results.rot13 }}
+        </div>
+
+        <div class="result">
+            <strong>String Split:</strong><br>
+            {{ results.split }}
+        </div>
+
+        <div class="result">
+            <strong>Character Insertion:</strong><br>
+            {{ results.character_insertion }}
+        </div>
+
+        <div class="result">
+            <strong>Hexadecimal Escape:</strong><br>
+            {{ results.hex_escape }}
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Defensive Detection Results</h2>
+
+        <div class="result">
+            <strong>Direct Signature Detection:</strong><br>
+
+            {% if results.direct_detection %}
+                <span class="warning">
+                    DETECTED — {{ results.direct_detection }}
+                </span>
+            {% else %}
+                <span class="safe">
+                    NOT DETECTED
+                </span>
+            {% endif %}
+        </div>
+
+        <div class="result">
+            <strong>Normalized Detection:</strong><br>
+
+            {% if results.normalized_detection %}
+                <span class="safe">
+                    DETECTED — {{ results.normalized_detection }}
+                </span>
+            {% else %}
+                <span class="warning">
+                    NOT DETECTED
+                </span>
+            {% endif %}
+        </div>
+
+    </div>
+
+    {% endif %}
+
+    <footer>
+        Educational use only • Uses benign test strings • Defensive security research
+    </footer>
+
+</div>
+
+</body>
+</html>
